@@ -1,5 +1,6 @@
 package com.nlp.demo.split;
 
+import com.nlp.demo.Utils;
 import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.process.DocumentPreprocessor;
 
@@ -36,7 +37,8 @@ public class SplitSentence {
 
 
     public static void main(String[] args) {
-        String text = "Being that this is the first time Roberts has mentioned her girlfriend on television since coming out in a Facebook post on Dec. 29, Stephanopoulos took the opportunity to address the exciting news. He hinted that her relationship with Laign was a well-known fact among her close colleagues and that he hoped her experience coming out was positive.";
+        String text = Utils.getResourcePage();
+
         SplitSentence spliter = new SplitSentence();
         List<String> sentences = spliter.split(text);
 
